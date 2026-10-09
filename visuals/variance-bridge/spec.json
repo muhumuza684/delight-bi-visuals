@@ -1,0 +1,100 @@
+{
+  "slug": "variance-bridge",
+  "name": "VarianceBridge",
+  "displayName": "Variance Bridge",
+  "guid": "variancebridge_powerbi_visual",
+  "description": "A waterfall that bridges Plan to Actual, showing which categories drove the variance.",
+  "kicker": "Before you add data",
+  "titleLead": "From plan to actual,",
+  "titleAccent": "explained.",
+  "lede": "See exactly which categories pushed performance above or below plan, in one bridge.",
+  "roles": [
+    {
+      "name": "category",
+      "displayName": "Category",
+      "kind": "Grouping",
+      "required": true,
+      "multiple": false,
+      "help": "The drivers of variance (for example product or department)."
+    },
+    {
+      "name": "actual",
+      "displayName": "Actual",
+      "kind": "Measure",
+      "required": true,
+      "multiple": false,
+      "help": "Actual value per category."
+    },
+    {
+      "name": "plan",
+      "displayName": "Plan",
+      "kind": "Measure",
+      "required": true,
+      "multiple": false,
+      "help": "Plan or budget value per category."
+    }
+  ],
+  "objects": [
+    {
+      "name": "bridge",
+      "displayName": "Bridge",
+      "properties": [
+        {
+          "name": "maxSteps",
+          "displayName": "Maximum steps",
+          "type": "numeric",
+          "default": 8,
+          "min": 3,
+          "max": 20,
+          "step": 1
+        },
+        {
+          "name": "lowerIsBetter",
+          "displayName": "Lower is better",
+          "type": "bool",
+          "default": false
+        },
+        {
+          "name": "zoomAxis",
+          "displayName": "Zoom axis to the variance",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "showLabels",
+          "displayName": "Show value labels",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "showConnectors",
+          "displayName": "Show connector lines",
+          "type": "bool",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "Add a Category field.",
+    "Add your Actual and Plan measures.",
+    "The bridge sorts drivers by impact and groups the rest as Other.",
+    "Click a step to cross-filter the report."
+  ],
+  "faq": [
+    {
+      "q": "Why does the axis not start at zero?",
+      "a": "Zoom axis makes small variances readable. Turn it off to start at zero."
+    },
+    {
+      "q": "What counts as favourable?",
+      "a": "Above plan is favourable unless Lower is better is on."
+    }
+  ],
+  "version": "0.2.0.0",
+  "highlights": [
+    "Plan to actual",
+    "Ranked drivers",
+    "Favourable or adverse"
+  ]
+}

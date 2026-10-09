@@ -1,0 +1,98 @@
+{
+  "slug": "scenario-planner",
+  "name": "ScenarioPlanner",
+  "displayName": "Scenario Planner",
+  "guid": "scenarioplanner_powerbi_visual",
+  "description": "What-if sliders per driver with live totals, deltas and saved assumptions.",
+  "kicker": "Before you add data",
+  "titleLead": "What if?",
+  "titleAccent": "Now you can see.",
+  "lede": "Nudge each driver up or down and watch the total, delta and every driver update instantly.",
+  "roles": [
+    {
+      "name": "driver",
+      "displayName": "Driver",
+      "kind": "Grouping",
+      "required": true,
+      "multiple": false,
+      "help": "The items you want to flex (for example product or cost line)."
+    },
+    {
+      "name": "base",
+      "displayName": "Base value",
+      "kind": "Measure",
+      "required": true,
+      "multiple": false,
+      "help": "The baseline value for each driver."
+    },
+    {
+      "name": "target",
+      "displayName": "Target",
+      "kind": "Measure",
+      "required": false,
+      "multiple": false,
+      "help": "Optional target total to compare the scenario against."
+    }
+  ],
+  "objects": [
+    {
+      "name": "scenario",
+      "displayName": "Scenario",
+      "properties": [
+        {
+          "name": "range",
+          "displayName": "Slider range (± %)",
+          "type": "numeric",
+          "default": 50,
+          "min": 5,
+          "max": 200,
+          "step": 5
+        },
+        {
+          "name": "state",
+          "displayName": "Saved assumptions",
+          "type": "text",
+          "default": "{}",
+          "hidden": true
+        },
+        {
+          "name": "showBase",
+          "displayName": "Show base column",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "step",
+          "displayName": "Slider step (%)",
+          "type": "numeric",
+          "default": 1,
+          "min": 1,
+          "max": 10,
+          "step": 1
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "Add a Driver and its Base value.",
+    "Move a slider to change a driver by a percentage.",
+    "Watch Scenario total and Delta update.",
+    "Reset to start again; your assumptions are saved with the report."
+  ],
+  "faq": [
+    {
+      "q": "Does this change my data?",
+      "a": "No. Scenarios are calculated in the visual and never change your model."
+    },
+    {
+      "q": "Are my assumptions kept?",
+      "a": "Yes. They are saved in the visual and restored when you reopen the report."
+    }
+  ],
+  "version": "0.2.0.7",
+  "highlights": [
+    "What-if sliders",
+    "Live delta",
+    "Saved assumptions"
+  ]
+}

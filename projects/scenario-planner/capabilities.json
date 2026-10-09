@@ -1,0 +1,218 @@
+{
+  "dataRoles": [
+    {
+      "name": "driver",
+      "displayName": "Driver",
+      "kind": "Grouping",
+      "description": "The items you want to flex (for example product or cost line)."
+    },
+    {
+      "name": "base",
+      "displayName": "Base value",
+      "kind": "Measure",
+      "description": "The baseline value for each driver."
+    },
+    {
+      "name": "target",
+      "displayName": "Target",
+      "kind": "Measure",
+      "description": "Optional target total to compare the scenario against."
+    },
+    {
+      "name": "tooltips",
+      "displayName": "Tooltips",
+      "kind": "GroupingOrMeasure",
+      "description": "Extra fields shown in the Power BI tooltip."
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "table": {
+        "rows": {
+          "select": [
+            {
+              "for": {
+                "in": "driver"
+              }
+            },
+            {
+              "for": {
+                "in": "base"
+              }
+            },
+            {
+              "for": {
+                "in": "target"
+              }
+            },
+            {
+              "for": {
+                "in": "tooltips"
+              }
+            }
+          ],
+          "dataReductionAlgorithm": {
+            "window": {
+              "count": 30000
+            }
+          }
+        }
+      }
+    }
+  ],
+  "objects": {
+    "theme": {
+      "displayName": "Theme",
+      "properties": {
+        "preset": {
+          "displayName": "Visual theme",
+          "type": {
+            "enumeration": [
+              {
+                "value": "luxe",
+                "displayName": "Default"
+              },
+              {
+                "value": "slate",
+                "displayName": "Slate"
+              },
+              {
+                "value": "ocean",
+                "displayName": "Ocean"
+              },
+              {
+                "value": "forest",
+                "displayName": "Forest"
+              },
+              {
+                "value": "sunrise",
+                "displayName": "Sunrise"
+              },
+              {
+                "value": "midnight",
+                "displayName": "Midnight"
+              },
+              {
+                "value": "classic",
+                "displayName": "Classic"
+              }
+            ]
+          }
+        },
+        "accent": {
+          "displayName": "Accent colour",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "density": {
+          "displayName": "Density",
+          "type": {
+            "enumeration": [
+              {
+                "value": "comfortable",
+                "displayName": "Comfortable"
+              },
+              {
+                "value": "compact",
+                "displayName": "Compact"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "general": {
+      "displayName": "General",
+      "properties": {
+        "fontSize": {
+          "displayName": "Text size",
+          "type": {
+            "numeric": true
+          }
+        },
+        "rowHeight": {
+          "displayName": "Row height",
+          "type": {
+            "numeric": true
+          }
+        },
+        "showHeader": {
+          "displayName": "Show header",
+          "type": {
+            "bool": true
+          }
+        },
+        "showWelcome": {
+          "displayName": "Show welcome card",
+          "type": {
+            "bool": true
+          }
+        }
+      }
+    },
+    "views": {
+      "displayName": "Saved layouts",
+      "properties": {
+        "layouts": {
+          "displayName": "Saved layouts",
+          "type": {
+            "text": true
+          }
+        }
+      }
+    },
+    "scenario": {
+      "displayName": "Scenario",
+      "properties": {
+        "range": {
+          "displayName": "Slider range (± %)",
+          "type": {
+            "numeric": true
+          }
+        },
+        "state": {
+          "displayName": "Saved assumptions",
+          "type": {
+            "text": true
+          }
+        },
+        "showBase": {
+          "displayName": "Show base column",
+          "type": {
+            "bool": true
+          }
+        },
+        "step": {
+          "displayName": "Slider step (%)",
+          "type": {
+            "numeric": true
+          }
+        }
+      }
+    }
+  },
+  "tooltips": {
+    "supportedTypes": {
+      "default": true,
+      "canvas": true
+    },
+    "roles": [
+      "tooltips"
+    ]
+  },
+  "supportsLandingPage": true,
+  "supportsEmptyDataView": true,
+  "supportsMultiVisualSelection": true,
+  "suppressDefaultTitle": true,
+  "privileges": [
+    {
+      "name": "ExportContent",
+      "essential": false
+    }
+  ]
+}

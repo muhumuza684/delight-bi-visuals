@@ -1,0 +1,165 @@
+{
+  "slug": "work-planner",
+  "name": "WorkPlanner",
+  "displayName": "Work Planner",
+  "guid": "workplanner_powerbi_visual",
+  "description": "Project planning with a timeline, progress, owners, status, overdue flags and a list view.",
+  "kicker": "Before you add data",
+  "titleLead": "Plan the work.",
+  "titleAccent": "Deliver it.",
+  "lede": "Turn tasks, owners and dates into a live timeline with progress, status and overdue flags.",
+  "roles": [
+    {
+      "name": "task",
+      "displayName": "Task",
+      "kind": "Grouping",
+      "required": true,
+      "multiple": false,
+      "help": "The task or work item name."
+    },
+    {
+      "name": "due",
+      "displayName": "Due date",
+      "kind": "Grouping",
+      "required": true,
+      "multiple": false,
+      "help": "Task end or due date."
+    },
+    {
+      "name": "start",
+      "displayName": "Start date",
+      "kind": "Grouping",
+      "required": false,
+      "multiple": false,
+      "help": "Task start date. Without it, tasks show as milestones."
+    },
+    {
+      "name": "owner",
+      "displayName": "Owner",
+      "kind": "Grouping",
+      "required": false,
+      "multiple": false,
+      "help": "Person or team responsible."
+    },
+    {
+      "name": "status",
+      "displayName": "Status",
+      "kind": "Grouping",
+      "required": false,
+      "multiple": false,
+      "help": "For example Not started, In progress, Done."
+    },
+    {
+      "name": "progress",
+      "displayName": "Progress",
+      "kind": "Measure",
+      "required": false,
+      "multiple": false,
+      "help": "0 to 1 (or 0 to 100) percent complete."
+    },
+    {
+      "name": "group",
+      "displayName": "Group",
+      "kind": "Grouping",
+      "required": false,
+      "multiple": false,
+      "help": "Phase or workstream to group tasks under."
+    }
+  ],
+  "objects": [
+    {
+      "name": "planner",
+      "displayName": "Planner",
+      "properties": [
+        {
+          "name": "view",
+          "displayName": "Default view",
+          "type": "enum",
+          "default": "timeline",
+          "options": [
+            {
+              "value": "timeline",
+              "displayName": "Timeline"
+            },
+            {
+              "value": "list",
+              "displayName": "List"
+            }
+          ]
+        },
+        {
+          "name": "colorBy",
+          "displayName": "Colour by",
+          "type": "enum",
+          "default": "status",
+          "options": [
+            {
+              "value": "status",
+              "displayName": "Status"
+            },
+            {
+              "value": "owner",
+              "displayName": "Owner"
+            },
+            {
+              "value": "group",
+              "displayName": "Group"
+            }
+          ]
+        },
+        {
+          "name": "showToday",
+          "displayName": "Show today line",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "showProgress",
+          "displayName": "Show progress fill",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "showSummary",
+          "displayName": "Show summary",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "showOwner",
+          "displayName": "Show owner",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "showOverdueFlag",
+          "displayName": "Flag overdue tasks",
+          "type": "bool",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "Add Task and Due date.",
+    "Add Start date to draw bars (otherwise milestones).",
+    "Add Owner, Status, Progress and Group to enrich the plan.",
+    "Switch between Timeline and List in the toolbar."
+  ],
+  "faq": [
+    {
+      "q": "How is overdue decided?",
+      "a": "A task is overdue when its due date has passed and it is not complete."
+    },
+    {
+      "q": "Is progress a percentage?",
+      "a": "Either 0 to 1 or 0 to 100 works."
+    }
+  ],
+  "version": "0.2.0.0",
+  "highlights": [
+    "Timeline and list",
+    "Progress and overdue",
+    "Group by phase"
+  ]
+}

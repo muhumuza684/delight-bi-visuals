@@ -1,0 +1,134 @@
+{
+  "slug": "executive-kpi",
+  "name": "ExecutiveKPI",
+  "displayName": "Executive KPI",
+  "guid": "executivekpi_powerbi_visual",
+  "description": "KPI cards with target attainment, change versus previous, status colour and a trend sparkline.",
+  "kicker": "Before you add data",
+  "titleLead": "The numbers that",
+  "titleAccent": "matter most.",
+  "lede": "One card per KPI with target progress, movement and a trend line so leaders see status at a glance.",
+  "roles": [
+    {
+      "name": "kpi",
+      "displayName": "KPI name",
+      "kind": "Grouping",
+      "required": false,
+      "multiple": false,
+      "help": "Creates one card per value. Leave empty for a single overall card."
+    },
+    {
+      "name": "actual",
+      "displayName": "Actual",
+      "kind": "Measure",
+      "required": true,
+      "multiple": false,
+      "help": "The current value of the KPI."
+    },
+    {
+      "name": "target",
+      "displayName": "Target",
+      "kind": "Measure",
+      "required": false,
+      "multiple": false,
+      "help": "Goal to compare against; drives the status colour."
+    },
+    {
+      "name": "previous",
+      "displayName": "Previous period",
+      "kind": "Measure",
+      "required": false,
+      "multiple": false,
+      "help": "Shows change versus the previous period."
+    },
+    {
+      "name": "period",
+      "displayName": "Trend axis",
+      "kind": "Grouping",
+      "required": false,
+      "multiple": false,
+      "help": "Date or period used to draw the sparkline and pick the latest value."
+    }
+  ],
+  "objects": [
+    {
+      "name": "kpi",
+      "displayName": "KPI",
+      "properties": [
+        {
+          "name": "lowerIsBetter",
+          "displayName": "Lower is better",
+          "type": "bool",
+          "default": false
+        },
+        {
+          "name": "greenAt",
+          "displayName": "Green at (% of target)",
+          "type": "numeric",
+          "default": 100,
+          "min": 50,
+          "max": 150,
+          "step": 1
+        },
+        {
+          "name": "amberAt",
+          "displayName": "Amber at (% of target)",
+          "type": "numeric",
+          "default": 90,
+          "min": 30,
+          "max": 120,
+          "step": 1
+        },
+        {
+          "name": "showSparkline",
+          "displayName": "Show sparkline",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "showTargetBar",
+          "displayName": "Show target bar",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "showDelta",
+          "displayName": "Show change vs previous",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "cardMinWidth",
+          "displayName": "Card width",
+          "type": "numeric",
+          "default": 240,
+          "min": 160,
+          "max": 420,
+          "step": 10
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "Add your measure to Actual.",
+    "Add Target and Previous period to unlock status and change.",
+    "Add a KPI name to get one card per KPI.",
+    "Add a Trend axis (date) to draw sparklines and use the latest period."
+  ],
+  "faq": [
+    {
+      "q": "How is the status colour chosen?",
+      "a": "Attainment is Actual divided by Target. Green and amber thresholds are in the Format pane."
+    },
+    {
+      "q": "What if lower is better (e.g. cost)?",
+      "a": "Turn on Lower is better in the KPI card of the Format pane."
+    }
+  ],
+  "version": "0.2.0.7",
+  "highlights": [
+    "Target attainment",
+    "Status colours",
+    "Trend sparklines"
+  ]
+}

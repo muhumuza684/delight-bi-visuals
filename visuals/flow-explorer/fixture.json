@@ -1,0 +1,61 @@
+{
+ "columns": [
+  {
+   "name": "From",
+   "roles": [
+    "source"
+   ],
+   "type": "text",
+   "measure": false
+  },
+  {
+   "name": "To",
+   "roles": [
+    "target"
+   ],
+   "type": "text",
+   "measure": false
+  },
+  {
+   "name": "Volume",
+   "roles": [
+    "value"
+   ],
+   "type": "number",
+   "measure": true
+  }
+ ],
+ "rows": [
+  [
+   "Leads",
+   "Qualified",
+   120
+  ],
+  [
+   "Leads",
+   "Dropped",
+   80
+  ],
+  [
+   "Qualified",
+   "Proposal",
+   70
+  ],
+  [
+   "Qualified",
+   "Dropped",
+   50
+  ],
+  [
+   "Proposal",
+   "Won",
+   40
+  ],
+  [
+   "Proposal",
+   "Lost",
+   30
+  ]
+ ],
+ "expect": "svg.dbi-flow"
+}

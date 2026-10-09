@@ -1,0 +1,69 @@
+{
+ "columns": [
+  {
+   "name": "City",
+   "roles": [
+    "location"
+   ],
+   "type": "text",
+   "measure": false
+  },
+  {
+   "name": "Lat",
+   "roles": [
+    "latitude"
+   ],
+   "type": "number",
+   "measure": true
+  },
+  {
+   "name": "Lon",
+   "roles": [
+    "longitude"
+   ],
+   "type": "number",
+   "measure": true
+  },
+  {
+   "name": "Sales",
+   "roles": [
+    "value"
+   ],
+   "type": "number",
+   "measure": true
+  }
+ ],
+ "rows": [
+  [
+   "Kampala",
+   0.3476,
+   32.5825,
+   900
+  ],
+  [
+   "Mbarara",
+   -0.6072,
+   30.6545,
+   400
+  ],
+  [
+   "Gulu",
+   2.7746,
+   32.299,
+   250
+  ],
+  [
+   "Nairobi",
+   -1.2864,
+   36.8172,
+   700
+  ],
+  [
+   "Kigali",
+   -1.9441,
+   30.0619,
+   300
+  ]
+ ],
+ "expect": "svg.dbi-geo"
+}

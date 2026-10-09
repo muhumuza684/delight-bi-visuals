@@ -1,0 +1,117 @@
+{
+ "columns": [
+  {
+   "name": "Task",
+   "roles": [
+    "task"
+   ],
+   "type": "text",
+   "measure": false
+  },
+  {
+   "name": "Start",
+   "roles": [
+    "start"
+   ],
+   "type": "date",
+   "measure": false
+  },
+  {
+   "name": "Due",
+   "roles": [
+    "due"
+   ],
+   "type": "date",
+   "measure": false
+  },
+  {
+   "name": "Owner",
+   "roles": [
+    "owner"
+   ],
+   "type": "text",
+   "measure": false
+  },
+  {
+   "name": "Status",
+   "roles": [
+    "status"
+   ],
+   "type": "text",
+   "measure": false
+  },
+  {
+   "name": "Progress",
+   "roles": [
+    "progress"
+   ],
+   "type": "number",
+   "measure": true
+  },
+  {
+   "name": "Phase",
+   "roles": [
+    "group"
+   ],
+   "type": "text",
+   "measure": false
+  }
+ ],
+ "rows": [
+  [
+   "Kick-off",
+   "2026-09-01",
+   "2026-09-15",
+   "Amina",
+   "Done",
+   1,
+   "Plan"
+  ],
+  [
+   "Requirements",
+   "2026-09-10",
+   "2026-09-24",
+   "Brian",
+   "Done",
+   1,
+   "Plan"
+  ],
+  [
+   "Design",
+   "2026-09-19",
+   "2026-10-03",
+   "Amina",
+   "In progress",
+   0.6,
+   "Build"
+  ],
+  [
+   "Build core",
+   "2026-09-28",
+   "2026-10-12",
+   "Chris",
+   "In progress",
+   0.4,
+   "Build"
+  ],
+  [
+   "Testing",
+   "2026-10-07",
+   "2026-10-21",
+   "Dina",
+   "Not started",
+   0,
+   "Deliver"
+  ],
+  [
+   "Go-live",
+   "2026-10-16",
+   "2026-10-30",
+   "Chris",
+   "Not started",
+   0,
+   "Deliver"
+  ]
+ ],
+ "expect": ".dbi-gantt"
+}

@@ -1,0 +1,178 @@
+{
+  "slug": "universal-table",
+  "name": "UniversalTable",
+  "displayName": "Universal Table",
+  "guid": "universaltable_powerbi_visual",
+  "description": "A table workspace with search, sorting, grouping, a pivot mode, column controls, filters, conditional formatting, calculated and combined columns.",
+  "kicker": "Before you add data",
+  "titleLead": "Every row,",
+  "titleAccent": "decision-ready.",
+  "lede": "Search, sort and group any dataset, switch to Pivot, add calculated columns and colour rules, then save the layout.",
+  "roles": [
+    {
+      "name": "rows",
+      "displayName": "Columns",
+      "kind": "Grouping",
+      "required": true,
+      "multiple": true,
+      "help": "The fields shown as columns. Add as many as you need."
+    },
+    {
+      "name": "groupBy",
+      "displayName": "Group by",
+      "kind": "Grouping",
+      "required": false,
+      "multiple": false,
+      "help": "Optional field to group rows with collapsible subtotals."
+    },
+    {
+      "name": "values",
+      "displayName": "Values",
+      "kind": "Measure",
+      "required": false,
+      "multiple": true,
+      "help": "Measures shown as numeric columns with totals."
+    }
+  ],
+  "objects": [
+    {
+      "name": "table",
+      "displayName": "Table",
+      "properties": [
+        {
+          "name": "striped",
+          "displayName": "Striped rows",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "showTotals",
+          "displayName": "Show totals",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "dataBars",
+          "displayName": "Data bars on first measure",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "pageSize",
+          "displayName": "Rows per page",
+          "type": "numeric",
+          "default": 200,
+          "min": 25,
+          "max": 1000,
+          "step": 25
+        },
+        {
+          "name": "showSearch",
+          "displayName": "Show search box",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "accentFirstColumn",
+          "displayName": "Accent first column",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "emphasizeHeaders",
+          "displayName": "Emphasize headers",
+          "type": "bool",
+          "default": true,
+          "tab": "layout"
+        },
+        {
+          "name": "pivotEnabled",
+          "displayName": "Show Pivot button",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "pivotRowTotals",
+          "displayName": "Pivot row totals",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "pivotColumnTotals",
+          "displayName": "Pivot column totals",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "pivotGrandTotal",
+          "displayName": "Pivot grand total",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "pivotEmpty",
+          "displayName": "Pivot empty cells",
+          "type": "enum",
+          "default": "blank",
+          "options": [
+            {
+              "value": "blank",
+              "displayName": "Blank"
+            },
+            {
+              "value": "dash",
+              "displayName": "Dash"
+            },
+            {
+              "value": "zero",
+              "displayName": "Zero"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tablestate",
+      "displayName": "Table state",
+      "properties": [
+        {
+          "name": "state",
+          "displayName": "State",
+          "type": "text",
+          "default": "{}",
+          "hidden": true
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "Drag one or more fields into Columns.",
+    "Add measures to Values to unlock totals, data bars and Pivot.",
+    "Optionally add a Group by field for collapsible groups.",
+    "Click a column header to sort; use Settings to filter, colour and add columns."
+  ],
+  "faq": [
+    {
+      "q": "How many rows can it show?",
+      "a": "Power BI delivers up to 30,000 rows; the table shows them page by page for speed."
+    },
+    {
+      "q": "How does Pivot work?",
+      "a": "Click Pivot, then pick Row groups, Column labels, a Value field and an Aggregation. Totals are in Settings > Data display."
+    },
+    {
+      "q": "Can I add my own columns?",
+      "a": "Yes. Settings > Analysis lets you add calculated columns (formulas) and combined columns (templates)."
+    },
+    {
+      "q": "Does clicking a row filter other visuals?",
+      "a": "Yes. Click selects the row; Ctrl-click selects several."
+    }
+  ],
+  "version": "0.2.0.7",
+  "highlights": [
+    "Search, group and pivot",
+    "Filters and colour rules",
+    "Calculated columns"
+  ]
+}

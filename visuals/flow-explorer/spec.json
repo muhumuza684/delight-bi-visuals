@@ -1,0 +1,100 @@
+{
+  "slug": "flow-explorer",
+  "name": "FlowExplorer",
+  "displayName": "Flow Explorer",
+  "guid": "flowexplorer_powerbi_visual",
+  "description": "A Sankey flow diagram showing how value moves from source to target.",
+  "kicker": "Before you add data",
+  "titleLead": "Follow the flow of",
+  "titleAccent": "value.",
+  "lede": "Trace how volume moves between stages, channels or accounts and spot where it concentrates.",
+  "roles": [
+    {
+      "name": "source",
+      "displayName": "Source",
+      "kind": "Grouping",
+      "required": true,
+      "multiple": false,
+      "help": "Where the flow starts."
+    },
+    {
+      "name": "target",
+      "displayName": "Target",
+      "kind": "Grouping",
+      "required": true,
+      "multiple": false,
+      "help": "Where the flow ends."
+    },
+    {
+      "name": "value",
+      "displayName": "Value",
+      "kind": "Measure",
+      "required": true,
+      "multiple": false,
+      "help": "The size of each flow."
+    }
+  ],
+  "objects": [
+    {
+      "name": "flow",
+      "displayName": "Flow",
+      "properties": [
+        {
+          "name": "maxLinks",
+          "displayName": "Maximum links",
+          "type": "numeric",
+          "default": 60,
+          "min": 5,
+          "max": 200,
+          "step": 5
+        },
+        {
+          "name": "nodeWidth",
+          "displayName": "Node width",
+          "type": "numeric",
+          "default": 14,
+          "min": 6,
+          "max": 40,
+          "step": 1
+        },
+        {
+          "name": "showValues",
+          "displayName": "Show values",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "linkOpacity",
+          "displayName": "Flow opacity (%)",
+          "type": "numeric",
+          "default": 38,
+          "min": 10,
+          "max": 90,
+          "step": 5
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "Add Source and Target fields.",
+    "Add a Value measure.",
+    "Hover a flow to see its size; click to cross-filter.",
+    "Raise Maximum links in the Format pane for dense data."
+  ],
+  "faq": [
+    {
+      "q": "Can flows loop back?",
+      "a": "Loops are ignored for layout so the diagram stays readable."
+    },
+    {
+      "q": "What if I have too many links?",
+      "a": "The largest links are shown first; adjust Maximum links."
+    }
+  ],
+  "version": "0.2.0.0",
+  "highlights": [
+    "Source to target",
+    "Highlight on hover",
+    "Loops handled"
+  ]
+}

@@ -1,0 +1,183 @@
+{
+ "columns": [
+  {
+   "name": "Region",
+   "roles": [
+    "dimension"
+   ],
+   "type": "text",
+   "measure": false
+  },
+  {
+   "name": "Product",
+   "roles": [
+    "dimension"
+   ],
+   "type": "text",
+   "measure": false
+  },
+  {
+   "name": "Revenue",
+   "roles": [
+    "measure"
+   ],
+   "type": "number",
+   "measure": true
+  },
+  {
+   "name": "Budget",
+   "roles": [
+    "compare"
+   ],
+   "type": "number",
+   "measure": true
+  }
+ ],
+ "rows": [
+  [
+   "Kampala",
+   "Alpha",
+   310,
+   536
+  ],
+  [
+   "Kampala",
+   "Beta",
+   630,
+   336
+  ],
+  [
+   "Kampala",
+   "Gamma",
+   104,
+   477
+  ],
+  [
+   "Kampala",
+   "Delta",
+   432,
+   610
+  ],
+  [
+   "Mbarara",
+   "Alpha",
+   958,
+   721
+  ],
+  [
+   "Mbarara",
+   "Beta",
+   564,
+   656
+  ],
+  [
+   "Mbarara",
+   "Gamma",
+   709,
+   149
+  ],
+  [
+   "Mbarara",
+   "Delta",
+   910,
+   802
+  ],
+  [
+   "Gulu",
+   "Alpha",
+   887,
+   818
+  ],
+  [
+   "Gulu",
+   "Beta",
+   453,
+   459
+  ],
+  [
+   "Gulu",
+   "Gamma",
+   193,
+   671
+  ],
+  [
+   "Gulu",
+   "Delta",
+   156,
+   161
+  ],
+  [
+   "Jinja",
+   "Alpha",
+   288,
+   246
+  ],
+  [
+   "Jinja",
+   "Beta",
+   406,
+   147
+  ],
+  [
+   "Jinja",
+   "Gamma",
+   100,
+   236
+  ],
+  [
+   "Jinja",
+   "Delta",
+   191,
+   427
+  ],
+  [
+   "Mbale",
+   "Alpha",
+   123,
+   887
+  ],
+  [
+   "Mbale",
+   "Beta",
+   653,
+   234
+  ],
+  [
+   "Mbale",
+   "Gamma",
+   327,
+   413
+  ],
+  [
+   "Mbale",
+   "Delta",
+   428,
+   211
+  ],
+  [
+   "Arua",
+   "Alpha",
+   864,
+   994
+  ],
+  [
+   "Arua",
+   "Beta",
+   519,
+   535
+  ],
+  [
+   "Arua",
+   "Gamma",
+   177,
+   192
+  ],
+  [
+   "Arua",
+   "Delta",
+   408,
+   338
+  ]
+ ],
+ "expect": ".dbi-rank"
+}

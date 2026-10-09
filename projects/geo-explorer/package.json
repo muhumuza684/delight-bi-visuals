@@ -1,0 +1,29 @@
+{
+  "name": "geo-explorer",
+  "version": "0.2.0",
+  "description": "A real map with country borders: plot locations as bubbles by latitude and longitude, or fill countries by name, with a ranked list.",
+  "private": true,
+  "scripts": {
+    "start": "pbiviz start",
+    "package": "pbiviz package",
+    "test": "jest",
+    "typecheck": "tsc --noEmit -p .",
+    "test:ci": "jest --runInBand --ci",
+    "ci": "npm run typecheck && npm run test:ci && npm run package"
+  },
+  "author": "Delight Insights - Bryt Ma Tech",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "powerbi-visuals-api": "5.3.0",
+    "powerbi-visuals-utils-formattingmodel": "6.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "29.5.12",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
+    "less": "4.9.0",
+    "powerbi-visuals-tools": "7.2.1",
+    "ts-jest": "29.1.2",
+    "typescript": "5.9.3"
+  }
+}

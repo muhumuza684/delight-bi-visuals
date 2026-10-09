@@ -1,0 +1,122 @@
+[
+  {
+    "name": "theme",
+    "displayName": "Theme",
+    "properties": [
+      {
+        "name": "preset",
+        "displayName": "Visual theme",
+        "type": "enum",
+        "default": "luxe",
+        "tab": "styling",
+        "options": [
+          {
+            "value": "luxe",
+            "displayName": "Default"
+          },
+          {
+            "value": "slate",
+            "displayName": "Slate"
+          },
+          {
+            "value": "ocean",
+            "displayName": "Ocean"
+          },
+          {
+            "value": "forest",
+            "displayName": "Forest"
+          },
+          {
+            "value": "sunrise",
+            "displayName": "Sunrise"
+          },
+          {
+            "value": "midnight",
+            "displayName": "Midnight"
+          },
+          {
+            "value": "classic",
+            "displayName": "Classic"
+          }
+        ]
+      },
+      {
+        "name": "accent",
+        "displayName": "Accent colour",
+        "type": "color",
+        "default": "#104F9F",
+        "tab": "styling"
+      },
+      {
+        "name": "density",
+        "displayName": "Density",
+        "type": "enum",
+        "default": "comfortable",
+        "tab": "layout",
+        "options": [
+          {
+            "value": "comfortable",
+            "displayName": "Comfortable"
+          },
+          {
+            "value": "compact",
+            "displayName": "Compact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "general",
+    "displayName": "General",
+    "properties": [
+      {
+        "name": "fontSize",
+        "displayName": "Text size",
+        "type": "numeric",
+        "default": 12,
+        "min": 8,
+        "max": 24,
+        "step": 0.5,
+        "tab": "layout"
+      },
+      {
+        "name": "rowHeight",
+        "displayName": "Row height",
+        "type": "numeric",
+        "default": 34,
+        "min": 22,
+        "max": 64,
+        "step": 1,
+        "tab": "layout"
+      },
+      {
+        "name": "showHeader",
+        "displayName": "Show header",
+        "type": "bool",
+        "default": true,
+        "tab": "layout"
+      },
+      {
+        "name": "showWelcome",
+        "displayName": "Show welcome card",
+        "type": "bool",
+        "default": true,
+        "tab": "layout"
+      }
+    ]
+  },
+  {
+    "name": "views",
+    "displayName": "Saved layouts",
+    "properties": [
+      {
+        "name": "layouts",
+        "displayName": "Saved layouts",
+        "type": "text",
+        "default": "[]",
+        "hidden": true
+      }
+    ]
+  }
+]

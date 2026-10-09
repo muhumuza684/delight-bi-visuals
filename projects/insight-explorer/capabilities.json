@@ -1,0 +1,212 @@
+{
+  "dataRoles": [
+    {
+      "name": "dimension",
+      "displayName": "Dimension",
+      "kind": "Grouping",
+      "description": "One or more fields. Click a bar to drill to the next field."
+    },
+    {
+      "name": "measure",
+      "displayName": "Measure",
+      "kind": "Measure",
+      "description": "The measure to rank by."
+    },
+    {
+      "name": "compare",
+      "displayName": "Compare to",
+      "kind": "Measure",
+      "description": "Optional benchmark (plan, last year) to find gaps."
+    },
+    {
+      "name": "tooltips",
+      "displayName": "Tooltips",
+      "kind": "GroupingOrMeasure",
+      "description": "Extra fields shown in the Power BI tooltip."
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "table": {
+        "rows": {
+          "select": [
+            {
+              "for": {
+                "in": "dimension"
+              }
+            },
+            {
+              "for": {
+                "in": "measure"
+              }
+            },
+            {
+              "for": {
+                "in": "compare"
+              }
+            },
+            {
+              "for": {
+                "in": "tooltips"
+              }
+            }
+          ],
+          "dataReductionAlgorithm": {
+            "window": {
+              "count": 30000
+            }
+          }
+        }
+      }
+    }
+  ],
+  "objects": {
+    "theme": {
+      "displayName": "Theme",
+      "properties": {
+        "preset": {
+          "displayName": "Visual theme",
+          "type": {
+            "enumeration": [
+              {
+                "value": "luxe",
+                "displayName": "Default"
+              },
+              {
+                "value": "slate",
+                "displayName": "Slate"
+              },
+              {
+                "value": "ocean",
+                "displayName": "Ocean"
+              },
+              {
+                "value": "forest",
+                "displayName": "Forest"
+              },
+              {
+                "value": "sunrise",
+                "displayName": "Sunrise"
+              },
+              {
+                "value": "midnight",
+                "displayName": "Midnight"
+              },
+              {
+                "value": "classic",
+                "displayName": "Classic"
+              }
+            ]
+          }
+        },
+        "accent": {
+          "displayName": "Accent colour",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "density": {
+          "displayName": "Density",
+          "type": {
+            "enumeration": [
+              {
+                "value": "comfortable",
+                "displayName": "Comfortable"
+              },
+              {
+                "value": "compact",
+                "displayName": "Compact"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "general": {
+      "displayName": "General",
+      "properties": {
+        "fontSize": {
+          "displayName": "Text size",
+          "type": {
+            "numeric": true
+          }
+        },
+        "rowHeight": {
+          "displayName": "Row height",
+          "type": {
+            "numeric": true
+          }
+        },
+        "showHeader": {
+          "displayName": "Show header",
+          "type": {
+            "bool": true
+          }
+        },
+        "showWelcome": {
+          "displayName": "Show welcome card",
+          "type": {
+            "bool": true
+          }
+        }
+      }
+    },
+    "views": {
+      "displayName": "Saved layouts",
+      "properties": {
+        "layouts": {
+          "displayName": "Saved layouts",
+          "type": {
+            "text": true
+          }
+        }
+      }
+    },
+    "insight": {
+      "displayName": "Insights",
+      "properties": {
+        "topN": {
+          "displayName": "Show top",
+          "type": {
+            "numeric": true
+          }
+        },
+        "showInsights": {
+          "displayName": "Show insights",
+          "type": {
+            "bool": true
+          }
+        },
+        "showShare": {
+          "displayName": "Show share %",
+          "type": {
+            "bool": true
+          }
+        }
+      }
+    }
+  },
+  "tooltips": {
+    "supportedTypes": {
+      "default": true,
+      "canvas": true
+    },
+    "roles": [
+      "tooltips"
+    ]
+  },
+  "supportsLandingPage": true,
+  "supportsEmptyDataView": true,
+  "supportsMultiVisualSelection": true,
+  "suppressDefaultTitle": true,
+  "privileges": [
+    {
+      "name": "ExportContent",
+      "essential": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "visual": {
+    "name": "VarianceBridge",
+    "displayName": "Variance Bridge",
+    "guid": "variancebridge_powerbi_visual",
+    "visualClassName": "VarianceBridge",
+    "version": "0.2.0.7",
+    "description": "A waterfall that bridges Plan to Actual, showing which categories drove the variance.",
+    "supportUrl": "https://github.com/",
+    "gitHubUrl": "https://github.com/"
+  },
+  "apiVersion": "5.3.0",
+  "author": {
+    "name": "Delight Insights - Bryt Ma Tech UG",
+    "email": "muhumuzabright26@gmail.com"
+  },
+  "assets": {
+    "icon": "assets/icon.png"
+  },
+  "externalJS": [],
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "stringResources": [
+    "stringResources/en-US/resources.resjson"
+  ]
+}

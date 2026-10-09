@@ -1,0 +1,106 @@
+{
+  "slug": "universal-filter",
+  "name": "UniversalFilter",
+  "displayName": "Universal Filter",
+  "guid": "universalfilter_powerbi_visual",
+  "description": "A searchable list filter that filters every other visual on the page.",
+  "kicker": "Before you add data",
+  "titleLead": "Filter once,",
+  "titleAccent": "focus everywhere.",
+  "lede": "Search and pick values from any field. The whole report page follows your choice.",
+  "roles": [
+    {
+      "name": "field",
+      "displayName": "Field",
+      "kind": "Grouping",
+      "required": true,
+      "multiple": false,
+      "help": "The field whose values you can pick."
+    },
+    {
+      "name": "count",
+      "displayName": "Count",
+      "kind": "Measure",
+      "required": false,
+      "multiple": false,
+      "help": "Optional measure shown beside each value."
+    }
+  ],
+  "objects": [
+    {
+      "name": "filter",
+      "displayName": "Filter",
+      "properties": [
+        {
+          "name": "showSearch",
+          "displayName": "Show search",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "showCounts",
+          "displayName": "Show counts",
+          "type": "bool",
+          "default": true
+        },
+        {
+          "name": "singleSelect",
+          "displayName": "Single select",
+          "type": "bool",
+          "default": false
+        },
+        {
+          "name": "sortBy",
+          "displayName": "Sort values",
+          "type": "enum",
+          "default": "data",
+          "options": [
+            {
+              "value": "data",
+              "displayName": "Data order"
+            },
+            {
+              "value": "alpha",
+              "displayName": "A to Z"
+            },
+            {
+              "value": "count",
+              "displayName": "Highest count"
+            }
+          ]
+        },
+        {
+          "name": "maxItems",
+          "displayName": "Maximum values",
+          "type": "numeric",
+          "default": 300,
+          "min": 50,
+          "max": 2000,
+          "step": 50
+        }
+      ]
+    }
+  ],
+  "steps": [
+    "Add one field to Field.",
+    "Optionally add a measure to Count.",
+    "Tick values to filter the page; use Clear to reset.",
+    "Use the search box to find values quickly."
+  ],
+  "faq": [
+    {
+      "q": "Does it filter the other visuals?",
+      "a": "Yes. It applies a real Power BI filter on the field you chose."
+    },
+    {
+      "q": "Why do values not disappear when filtered?",
+      "a": "Like a slicer, it keeps all values visible so you can change your choice."
+    }
+  ],
+  "version": "0.2.0.0",
+  "highlights": [
+    "Search values",
+    "Real page filter",
+    "Counts beside values"
+  ]
+}

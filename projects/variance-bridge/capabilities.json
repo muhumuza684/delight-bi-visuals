@@ -1,0 +1,224 @@
+{
+  "dataRoles": [
+    {
+      "name": "category",
+      "displayName": "Category",
+      "kind": "Grouping",
+      "description": "The drivers of variance (for example product or department)."
+    },
+    {
+      "name": "actual",
+      "displayName": "Actual",
+      "kind": "Measure",
+      "description": "Actual value per category."
+    },
+    {
+      "name": "plan",
+      "displayName": "Plan",
+      "kind": "Measure",
+      "description": "Plan or budget value per category."
+    },
+    {
+      "name": "tooltips",
+      "displayName": "Tooltips",
+      "kind": "GroupingOrMeasure",
+      "description": "Extra fields shown in the Power BI tooltip."
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "table": {
+        "rows": {
+          "select": [
+            {
+              "for": {
+                "in": "category"
+              }
+            },
+            {
+              "for": {
+                "in": "actual"
+              }
+            },
+            {
+              "for": {
+                "in": "plan"
+              }
+            },
+            {
+              "for": {
+                "in": "tooltips"
+              }
+            }
+          ],
+          "dataReductionAlgorithm": {
+            "window": {
+              "count": 30000
+            }
+          }
+        }
+      }
+    }
+  ],
+  "objects": {
+    "theme": {
+      "displayName": "Theme",
+      "properties": {
+        "preset": {
+          "displayName": "Visual theme",
+          "type": {
+            "enumeration": [
+              {
+                "value": "luxe",
+                "displayName": "Default"
+              },
+              {
+                "value": "slate",
+                "displayName": "Slate"
+              },
+              {
+                "value": "ocean",
+                "displayName": "Ocean"
+              },
+              {
+                "value": "forest",
+                "displayName": "Forest"
+              },
+              {
+                "value": "sunrise",
+                "displayName": "Sunrise"
+              },
+              {
+                "value": "midnight",
+                "displayName": "Midnight"
+              },
+              {
+                "value": "classic",
+                "displayName": "Classic"
+              }
+            ]
+          }
+        },
+        "accent": {
+          "displayName": "Accent colour",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "density": {
+          "displayName": "Density",
+          "type": {
+            "enumeration": [
+              {
+                "value": "comfortable",
+                "displayName": "Comfortable"
+              },
+              {
+                "value": "compact",
+                "displayName": "Compact"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "general": {
+      "displayName": "General",
+      "properties": {
+        "fontSize": {
+          "displayName": "Text size",
+          "type": {
+            "numeric": true
+          }
+        },
+        "rowHeight": {
+          "displayName": "Row height",
+          "type": {
+            "numeric": true
+          }
+        },
+        "showHeader": {
+          "displayName": "Show header",
+          "type": {
+            "bool": true
+          }
+        },
+        "showWelcome": {
+          "displayName": "Show welcome card",
+          "type": {
+            "bool": true
+          }
+        }
+      }
+    },
+    "views": {
+      "displayName": "Saved layouts",
+      "properties": {
+        "layouts": {
+          "displayName": "Saved layouts",
+          "type": {
+            "text": true
+          }
+        }
+      }
+    },
+    "bridge": {
+      "displayName": "Bridge",
+      "properties": {
+        "maxSteps": {
+          "displayName": "Maximum steps",
+          "type": {
+            "numeric": true
+          }
+        },
+        "lowerIsBetter": {
+          "displayName": "Lower is better",
+          "type": {
+            "bool": true
+          }
+        },
+        "zoomAxis": {
+          "displayName": "Zoom axis to the variance",
+          "type": {
+            "bool": true
+          }
+        },
+        "showLabels": {
+          "displayName": "Show value labels",
+          "type": {
+            "bool": true
+          }
+        },
+        "showConnectors": {
+          "displayName": "Show connector lines",
+          "type": {
+            "bool": true
+          }
+        }
+      }
+    }
+  },
+  "tooltips": {
+    "supportedTypes": {
+      "default": true,
+      "canvas": true
+    },
+    "roles": [
+      "tooltips"
+    ]
+  },
+  "supportsLandingPage": true,
+  "supportsEmptyDataView": true,
+  "supportsMultiVisualSelection": true,
+  "suppressDefaultTitle": true,
+  "privileges": [
+    {
+      "name": "ExportContent",
+      "essential": false
+    }
+  ]
+}

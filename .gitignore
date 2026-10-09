@@ -1,0 +1,6 @@
+node_modules
+projects/*/node_modules
+projects/*/dist/
+projects/*/.tmp/
+projects/*/webpack.statistics.*.html
+dist-pbiviz

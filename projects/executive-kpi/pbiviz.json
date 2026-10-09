@@ -1,0 +1,26 @@
+{
+  "visual": {
+    "name": "ExecutiveKPI",
+    "displayName": "Executive KPI",
+    "guid": "executivekpi_powerbi_visual",
+    "visualClassName": "ExecutiveKPI",
+    "version": "0.2.0.7",
+    "description": "KPI cards with target attainment, change versus previous, status colour and a trend sparkline.",
+    "supportUrl": "https://github.com/",
+    "gitHubUrl": "https://github.com/"
+  },
+  "apiVersion": "5.3.0",
+  "author": {
+    "name": "Delight Insights - Bryt Ma Tech UG",
+    "email": "muhumuzabright26@gmail.com"
+  },
+  "assets": {
+    "icon": "assets/icon.png"
+  },
+  "externalJS": [],
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "stringResources": [
+    "stringResources/en-US/resources.resjson"
+  ]
+}
